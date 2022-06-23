@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Daily_Report.MainPage">
+
+    <ScrollView>
+
+        <StackLayout Margin="20">
+            <Frame BackgroundColor="#C0C0C0" Padding="20" CornerRadius="15">
+                <Label x:Name="ReportNumber" Text="Report number" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+            </Frame>
+
+
+            <Entry Placeholder="" HorizontalTextAlignment="Center" />
+
+
+            <Frame BackgroundColor="#C0C0C0" Padding="20" CornerRadius="15">
+                <Label x:Name="ReportDate" Text="Report Date" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+            </Frame>
+
+            <DatePicker  Date="{Binding Date}" HorizontalOptions="Center"/>
+
+            <Frame BackgroundColor="#ffee54" Padding="40" CornerRadius="15">
+                <Label x:Name="WeatherNow" Text="Weather" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+            </Frame>
+
+
+            <Frame BackgroundColor="#A8A8A8" Padding="40" CornerRadius="15">
+
+                <Picker x:Name="sky"
+        Title="Please select a weather condition"
+                        FontSize="14"
+        TitleColor="Blue" >
+
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Sunny</x:String>
+                            <x:String>Cloud</x:String>
+                            <x:String>Rain</x:String>
+                            <x:String>Storm</x:String>
+                            <x:String>Fog</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+            </Frame>
+
+
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+
+
+                <Frame Grid.Column="0" Grid.Row="1" BackgroundColor="#f3a32a" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="1" x:Name="OnTheRoad" Text="Roadman" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="1" BackgroundColor="#C0C0C0 " x:Name="RoadmanQuantity" Text="+" Clicked="RoadmanQuantity_Clicked" TextColor="Black" FontSize="16" />
+                <Button Grid.Column="2" Grid.Row="1" BackgroundColor="#A8A8A8" x:Name="RoadmanLess" Text="-" Clicked="RoadmanLess_Clicked" TextColor="Black" FontSize="18" />
+                <Button Grid.Column="3" Grid.Row="1" BackgroundColor="#8FBC8F" x:Name="RoadmanPlusFive" Text="+5" Clicked="PlusFiveRoadman_Clicked" TextColor="Black" FontSize="18" />
+
+
+
+                <Frame Grid.Column="0" Grid.Row="2" BackgroundColor="#f3a32a" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="2" x:Name="OnTheBridge" Text="BridgeWorker" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16" />
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="2" BackgroundColor="#C0C0C0 " x:Name="BridgeWorkers" Text="+" Clicked="BridgeWorkersQuantity_Clicked" TextColor="Black" FontSize="16" />
+                <Button Grid.Column="2" Grid.Row="2" BackgroundColor="#A8A8A8" x:Name="BridgeWorkersLess" Text="-" Clicked="BridgeWorkersLess_Clicked" TextColor="Black" FontSize="18" />
+                <Button Grid.Column="3" Grid.Row="2" BackgroundColor="#8FBC8F" x:Name="BridgeWorkersPlusFive" Text="+5" Clicked="PlusFiveBridgeWorkers_Clicked" TextColor="Black" FontSize="18" />
+
+
+
+                <Frame Grid.Column="0" Grid.Row="3" BackgroundColor="#f3a32a" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="3" x:Name="Other" Text="OtherWorkers" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="3" BackgroundColor="#C0C0C0 " x:Name="OtherWorkers" Text="+" Clicked="OtherWorkersQuantity_Clicked" TextColor="Black" FontSize="16"/>
+                <Button Grid.Column="2" Grid.Row="3" BackgroundColor="#A8A8A8" x:Name="OtherWorkersLess" Text="-" Clicked="OtherWorkersLess_Clicked" TextColor="Black" FontSize="18"/>
+                <Button Grid.Column="3" Grid.Row="3" BackgroundColor="#8FBC8F" x:Name="OtherWorkersPlusFive" Text="+5" Clicked="PlusFiveOtherWorkers_Clicked" TextColor="Black" FontSize="18"/>
+
+
+
+
+                <Frame Grid.Column="0" Grid.Row="4" BackgroundColor="#edcb5c" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="4" x:Name="Milling" Text="MillingMachine" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="4" BackgroundColor="#C0C0C0 " x:Name="MillingMachineQuantity" Text="+" Clicked="MillingMashineQuantity_Clicked" TextColor="Black" FontSize="16"/>
+                <Button Grid.Column="2" Grid.Row="4" BackgroundColor="#A8A8A8" x:Name="MillingMachineLess" Text="-" Clicked="MillingMashineLess_Clicked" TextColor="Black" FontSize="18"/>
+
+
+
+
+                <Frame Grid.Column="0" Grid.Row="5" BackgroundColor="#edcb5c" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="5" x:Name="Digging" Text="Excavator" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="5" BackgroundColor="#C0C0C0 " x:Name="ExcavatorQuantity" Text="+" Clicked="ExcavatorQuantity_Clicked" TextColor="Black" FontSize="16"/>
+                <Button Grid.Column="2" Grid.Row="5" BackgroundColor="#A8A8A8" x:Name="ExcavatorLess" Text="-" Clicked="ExcavatorLess_Clicked" TextColor="Black" FontSize="18"/>
+
+
+
+
+                <Frame Grid.Column="0" Grid.Row="6" BackgroundColor="#edcb5c" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="6" x:Name="LoaderMachine" Text="Loader" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="6" BackgroundColor="#C0C0C0 " x:Name="LoaderQuantity" Text="+" Clicked="LoaderQuantity_Clicked" TextColor="Black" FontSize="16"/>
+                <Button Grid.Column="2" Grid.Row="6" BackgroundColor="#A8A8A8" x:Name="LoaderLess" Text="-" Clicked="LoaderLess_Clicked" TextColor="Black" FontSize="18"/>
+
+
+
+                <Frame Grid.Column="0" Grid.Row="7" BackgroundColor="#edcb5c" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="7" x:Name="BulldozerMachine" Text="Bulldozer" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="7" BackgroundColor="#C0C0C0 " x:Name="BulldozerQuantity" Text="+" Clicked="BulldozerQuantity_Clicked" TextColor="Black" FontSize="16"/>
+                <Button Grid.Column="2" Grid.Row="7" BackgroundColor="#A8A8A8" x:Name="BulldozerLess" Text="-" Clicked="BulldozerLess_Clicked" TextColor="Black" FontSize="18"/>
+
+
+
+
+                <Frame Grid.Column="0" Grid.Row="8" BackgroundColor="#edcb5c" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="8" x:Name="DumpTruck" Text="Dump Truck" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="8" BackgroundColor="#C0C0C0 " x:Name="DumpTruckQuantity" Text="+" Clicked="DumpTruckQuantity_Clicked" TextColor="Black" FontSize="16"/>
+                <Button Grid.Column="2" Grid.Row="8" BackgroundColor="#A8A8A8" x:Name="DumpTruckLess" Text="-" Clicked="DumpTruckLess_Clicked" TextColor="Black" FontSize="18"/>
+
+
+
+
+                <Frame Grid.Column="0" Grid.Row="9" BackgroundColor="#edcb5c" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="9" x:Name="BackhoeLoader" Text="Backhoe Loader" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="9" BackgroundColor="#C0C0C0 " x:Name="BackhoeLoaderQuantity" Text="+" Clicked="BackhoeLoaderQuantity_Clicked" TextColor="Black" FontSize="16"/>
+                <Button Grid.Column="2" Grid.Row="9" BackgroundColor="#A8A8A8" x:Name="BackhoeLoaderLess" Text="-" Clicked="BackhoeLoaderLess_Clicked" TextColor="Black" FontSize="18"/>
+
+
+
+
+                <Frame Grid.Column="0" Grid.Row="10" BackgroundColor="#edcb5c" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="10" x:Name="CompactorMachine" Text="Compactor" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="10" BackgroundColor="#C0C0C0" x:Name="CompactorQuantity" Text="+" Clicked="CompactorQuantity_Clicked" TextColor="Black" FontSize="16"/>
+                <Button Grid.Column="2" Grid.Row="10" BackgroundColor="#A8A8A8" x:Name="CompactorLess" Text="-" Clicked="CompactorLess_Clicked" TextColor="Black" FontSize="18"/>
+
+
+
+
+                <Frame Grid.Column="0" Grid.Row="11" BackgroundColor="#edcb5c" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="11" x:Name="RoadRoller" Text="Roller" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="11" BackgroundColor="#C0C0C0 " x:Name="RollerQuantity" Text="+" Clicked="RollerQuantity_Clicked" TextColor="Black" FontSize="16"/>
+                <Button Grid.Column="2" Grid.Row="11" BackgroundColor="#A8A8A8" x:Name="RollerLess" Text="-" Clicked="RollerLess_Clicked" TextColor="Black" FontSize="18"/>
+
+
+
+
+                <Frame Grid.Column="0" Grid.Row="12" BackgroundColor="#edcb5c" Padding="15" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="12" x:Name="RoadGrader" Text="Grader" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="12" BackgroundColor="#C0C0C0" x:Name="GraderQuantity" Text="+" Clicked="GraderQuantity_Clicked" TextColor="Black" FontSize="16"/>
+                <Button Grid.Column="2" Grid.Row="12" BackgroundColor="#A8A8A8" x:Name="GraderLess" Text="-" Clicked="GraderLess_Clicked" TextColor="Black" FontSize="18"/>
+
+
+
+
+                <Frame Grid.Column="0" Grid.Row="13" BackgroundColor="#edcb5c" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="13" x:Name="RoadPaver" Text="Paver" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="13" BackgroundColor="#C0C0C0" x:Name="PaverQuantity" Text="+" Clicked="PaverQuantity_Clicked" TextColor="Black" FontSize="16"/>
+                <Button Grid.Column="2" Grid.Row="13" BackgroundColor="#A8A8A8" x:Name="PaverLess" Text="-" Clicked="PaverLess_Clicked" TextColor="Black" FontSize="18"/>
+
+
+
+                <Frame Grid.Column="0" Grid.Row="14" BackgroundColor="#edcb5c" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="14" x:Name="RoadMiniExcavator" Text="Mini excavator" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="14" BackgroundColor="#C0C0C0" x:Name="MiniExcavatorQuantity" Text="+" Clicked="MiniExcavatorQuantity_Clicked" TextColor="Black" FontSize="16"/>
+                <Button Grid.Column="2" Grid.Row="14" BackgroundColor="#A8A8A8" x:Name="MiniExcavatorLess" Text="-" Clicked="MiniExcavatorLess_Clicked" TextColor="Black" FontSize="18"/>
+
+
+
+
+                <Frame Grid.Column="0" Grid.Row="18" BackgroundColor="#C0C0C0" Padding="10" CornerRadius="15">
+                    <Label Grid.Column="0" Grid.Row="14" x:Name="Comments" Text="Comments on the report" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+
+                </Frame>
+
+
+
+
+                <Button Grid.Column="0" Grid.Row="20" BackgroundColor="#75222a" x:Name="ClearButton" Text="Clear" Clicked="ClearButton_Clicked" TextColor="White" FontSize="16"/>
+            </Grid>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>
