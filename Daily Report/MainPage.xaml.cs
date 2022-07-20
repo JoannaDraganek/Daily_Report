@@ -10,6 +10,10 @@ using System.Net;
 using System.Text.Json;
 using System.Threading;
 using System.Globalization;
+using PdfSharpCore.Pdf;
+using PdfSharpCore.Drawing;
+using PdfSharpCore.Fonts;
+using DinkToPdf;
 
 namespace Daily_Report
 {
@@ -350,50 +354,41 @@ namespace Daily_Report
 
 
 
-
-        private void ClearButton_Clicked(object sender, EventArgs e)
+        private void SaveButton_Clicked(object sender, EventArgs e)
         {
-            roadmanWorkers = 0;
-            RoadmanQuantity.Text = roadmanWorkers.ToString();
+            var document = new PdfDocument();
+            var page = document.AddPage();
+            var gfx = XGraphics.FromPdfPage(page);
+            //var font = new XFont("Arial", 20);
 
-            bridgeWorkers = 0;
-            BridgeWorkers.Text = bridgeWorkers.ToString();
-
-            otherWorkers = 0;
-            OtherWorkers.Text = otherWorkers.ToString();
-
-            millingMachine = 0;
-            MillingMachineQuantity.Text = millingMachine.ToString();
-
-            excavatorMachine = 0;
-            ExcavatorQuantity.Text = excavatorMachine.ToString();
-
-            loaderMachine = 0;
-            LoaderQuantity.Text = loaderMachine.ToString();
-
-            bulldozerMachine = 0;
-            BulldozerQuantity.Text = bulldozerMachine.ToString();
-
-            dumpTruck = 0;
-            DumpTruckQuantity.Text = dumpTruck.ToString();
-
-            backhoeLoader = 0;
-            BackhoeLoaderQuantity.Text = backhoeLoader.ToString();
-
-            compactor = 0;
-            CompactorQuantity.Text = compactor.ToString();
-
-            roller = 0;
-            RollerQuantity.Text = roller.ToString();
-
-            grader = 0;
-            GraderQuantity.Text = grader.ToString();
-
-            paver = 0;
-            PaverQuantity.Text = paver.ToString();
-
-            miniExcavator = 0;
-            MiniExcavatorQuantity.Text = miniExcavator.ToString();
+            //gfx.DrawString(
+            //    "Hello World!", font, XBrushes.Black,
+            //    new XRect(20, 20, page.Width, page.Height),
+            //    XStringFormats.Center);
+           // gfx.DrawRectangle(new XPen(XColor.FromArgb(255, 0,0)), new XRect(20, 30,15,30));
+           // var tmp = System.IO.Path.GetTempPath();
+          //  document.Save($"{tmp}test.pdf");
+            /*
+            var converter = new BasicConverter(new PdfTools());
+            var doc = new HtmlToPdfDocument()
+            {
+                    GlobalSettings =
+                     {
+                    ColorMode = ColorMode.Color,
+                    Orientation = Orientation.Portrait,
+                    PaperSize = PaperKind.A4,
+                    Margins = new MarginSettings() { Top = 10 },
+                    Out = @"test.pdf",
+                     },
+                    Objects = {
+                    new ObjectSettings()
+                    {
+                    Page = "http://google.com/",
+                    },
+                     }
+            };
+            converter.Convert(doc);
+            */
         }
 
     }

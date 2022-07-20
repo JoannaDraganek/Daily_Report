@@ -1,36 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:Daily_Report.Helpers" 
              x:Class="Daily_Report.MainPage">
 
     <ScrollView>
 
         <StackLayout Margin="20">
-            <Frame BackgroundColor="#C0C0C0" Padding="20" CornerRadius="15">
-                <Label x:Name="ReportNumber" Text="Report number" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+            <Frame BackgroundColor="#476dfc" Padding="20" CornerRadius="15">
+                <Entry Placeholder="" HorizontalTextAlignment="Center" Text="{i18n:Translate ReportNumber}" TextColor="White" FontSize="16"/>
             </Frame>
 
-
-            <Entry Placeholder="" HorizontalTextAlignment="Center" />
-
-
-            <Frame BackgroundColor="#C0C0C0" Padding="20" CornerRadius="15">
-                <Label x:Name="ReportDate" Text="Report Date" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+            <Frame BackgroundColor="#325dfc" Padding="20" CornerRadius="15">
+                <Label x:Name="ReportDate" Text="{i18n:Translate ReportDate}" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
             </Frame>
 
             <DatePicker  Date="{Binding Date}" HorizontalOptions="Center"/>
 
-            <Frame BackgroundColor="#ffee54" Padding="40" CornerRadius="15">
-                <Label x:Name="WeatherNow" Text="Weather" HorizontalTextAlignment="Center" TextColor="Black" FontSize="16"/>
+            <Frame BackgroundColor="#2b50d9" Padding="40" CornerRadius="15">
+                <Label x:Name="WeatherNow" Text="{i18n:Translate WeatherNow}" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
             </Frame>
 
 
-            <Frame BackgroundColor="#A8A8A8" Padding="40" CornerRadius="15">
+            <Frame BackgroundColor="#2140b0" Padding="40" CornerRadius="15">
 
-                <Picker x:Name="sky"
-        Title="Please select a weather condition"
+                <Picker x:Name="Sky"
+        Title="{i18n:Translate Sky}" 
+                        HorizontalTextAlignment="Center"
                         FontSize="14"
-        TitleColor="Blue" >
+        TitleColor="White" >
 
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
@@ -192,7 +190,7 @@
 
 
 
-                <Button Grid.Column="0" Grid.Row="20" BackgroundColor="#75222a" x:Name="ClearButton" Text="Clear" Clicked="ClearButton_Clicked" TextColor="White" FontSize="16"/>
+                <Button Grid.Column="0" Grid.Row="20" BackgroundColor="#75222a" x:Name="SaveButton" Text="Save" Clicked="SaveButton_Clicked" TextColor="White" FontSize="16"/>
             </Grid>
         </StackLayout>
 
