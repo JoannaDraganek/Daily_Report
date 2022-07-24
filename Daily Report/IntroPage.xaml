@@ -8,8 +8,8 @@
             <Frame BackgroundColor="#476dfc" Padding="24" CornerRadius="0">
                 <Label x:Name="Greeting" Text="{i18n:Translate Greeting}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
             </Frame>
-            <Label BackgroundColor="#325dfc" x:Name="Note" Text="{i18n:Translate Note}" FontSize="Title" Padding="30,10,30,10"/>
-            <Label BackgroundColor="#2b50d9" x:Name="Note2" Text="{i18n:Translate Note2}" FontSize="Subtitle" Padding="30,15,30,15"/>
+            <Label BackgroundColor="#325dfc" x:Name="Note" Text="{i18n:Translate Note}" FontSize="Title" HorizontalTextAlignment="Center" Padding="30,10,30,10"/>
+            <Label BackgroundColor="#2b50d9" x:Name="Note2" Text="{i18n:Translate Note2}" FontSize="Subtitle" HorizontalTextAlignment="Center" Padding="30,15,30,15"/>
 
             <Button BackgroundColor="#2140b0" x:Name="Npage" Text="{i18n:Translate Npage}" Clicked="Next_Clicked" />
 

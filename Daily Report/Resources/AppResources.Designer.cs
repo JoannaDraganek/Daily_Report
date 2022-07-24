@@ -61,11 +61,164 @@ namespace Daily_Report.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Auxiliary equipment (other).
+        /// </summary>
+        internal static string AuxiliaryEquipment {
+            get {
+                return ResourceManager.GetString("AuxiliaryEquipment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Backhoe Loader.
+        /// </summary>
+        internal static string BackhoeLoader {
+            get {
+                return ResourceManager.GetString("BackhoeLoader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bridge industry.
+        /// </summary>
+        internal static string BridgeIndustry {
+            get {
+                return ResourceManager.GetString("BridgeIndustry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bridge Workers.
+        /// </summary>
+        internal static string BridgeWorker {
+            get {
+                return ResourceManager.GetString("BridgeWorker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bulldozer.
+        /// </summary>
+        internal static string BulldozerMachine {
+            get {
+                return ResourceManager.GetString("BulldozerMachine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cloud.
+        /// </summary>
+        internal static string Cloud {
+            get {
+                return ResourceManager.GetString("Cloud", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comments on the report.
+        /// </summary>
+        internal static string Comments {
+            get {
+                return ResourceManager.GetString("Comments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Compactor.
+        /// </summary>
+        internal static string CompactorMachine {
+            get {
+                return ResourceManager.GetString("CompactorMachine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Concrete mixer truck.
+        /// </summary>
+        internal static string ConcreteMixerTruck {
+            get {
+                return ResourceManager.GetString("ConcreteMixerTruck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Concrete pump.
+        /// </summary>
+        internal static string ConcretePump {
+            get {
+                return ResourceManager.GetString("ConcretePump", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crane.
+        /// </summary>
+        internal static string Crane {
+            get {
+                return ResourceManager.GetString("Crane", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Daily Report.
+        /// </summary>
+        internal static string DailyReport {
+            get {
+                return ResourceManager.GetString("DailyReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excavator.
+        /// </summary>
+        internal static string Digging {
+            get {
+                return ResourceManager.GetString("Digging", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dump Truck.
+        /// </summary>
+        internal static string DumpTruck {
+            get {
+                return ResourceManager.GetString("DumpTruck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fog.
+        /// </summary>
+        internal static string Fog {
+            get {
+                return ResourceManager.GetString("Fog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Welcome to Daily Report App!.
         /// </summary>
         internal static string Greeting {
             get {
                 return ResourceManager.GetString("Greeting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loader.
+        /// </summary>
+        internal static string LoaderMachine {
+            get {
+                return ResourceManager.GetString("LoaderMachine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Milling Machine.
+        /// </summary>
+        internal static string Milling {
+            get {
+                return ResourceManager.GetString("Milling", resourceCulture);
             }
         }
         
@@ -97,6 +250,42 @@ namespace Daily_Report.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Other.
+        /// </summary>
+        internal static string Other {
+            get {
+                return ResourceManager.GetString("Other", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other Industry.
+        /// </summary>
+        internal static string OtherIndustry {
+            get {
+                return ResourceManager.GetString("OtherIndustry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Piling machine.
+        /// </summary>
+        internal static string PilingMachine {
+            get {
+                return ResourceManager.GetString("PilingMachine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rain.
+        /// </summary>
+        internal static string Rain {
+            get {
+                return ResourceManager.GetString("Rain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Report Date.
         /// </summary>
         internal static string ReportDate {
@@ -115,6 +304,69 @@ namespace Daily_Report.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Grader.
+        /// </summary>
+        internal static string RoadGrader {
+            get {
+                return ResourceManager.GetString("RoadGrader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Road industry.
+        /// </summary>
+        internal static string RoadIndustry {
+            get {
+                return ResourceManager.GetString("RoadIndustry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Road Workers.
+        /// </summary>
+        internal static string Roadman {
+            get {
+                return ResourceManager.GetString("Roadman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mini excavator.
+        /// </summary>
+        internal static string RoadMiniExcavator {
+            get {
+                return ResourceManager.GetString("RoadMiniExcavator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paver.
+        /// </summary>
+        internal static string RoadPaver {
+            get {
+                return ResourceManager.GetString("RoadPaver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Roller.
+        /// </summary>
+        internal static string RoadRoller {
+            get {
+                return ResourceManager.GetString("RoadRoller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string SaveButton {
+            get {
+                return ResourceManager.GetString("SaveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please select a weather condition.
         /// </summary>
         internal static string Sky {
@@ -124,11 +376,47 @@ namespace Daily_Report.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sprinkler.
+        /// </summary>
+        internal static string Sprinkler {
+            get {
+                return ResourceManager.GetString("Sprinkler", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Storm.
+        /// </summary>
+        internal static string Storm {
+            get {
+                return ResourceManager.GetString("Storm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sunny.
         /// </summary>
         internal static string Sunny {
             get {
                 return ResourceManager.GetString("Sunny", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sweeper.
+        /// </summary>
+        internal static string Sweeper {
+            get {
+                return ResourceManager.GetString("Sweeper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Equipment.
+        /// </summary>
+        internal static string TypeOfEquipment {
+            get {
+                return ResourceManager.GetString("TypeOfEquipment", resourceCulture);
             }
         }
         

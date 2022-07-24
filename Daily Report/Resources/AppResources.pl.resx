@@ -117,8 +117,59 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AuxiliaryEquipment" xml:space="preserve">
+    <value>Sprzęt pomocniczy (inne)</value>
+  </data>
+  <data name="BackhoeLoader" xml:space="preserve">
+    <value>Koparko-ładowarka</value>
+  </data>
+  <data name="BridgeIndustry" xml:space="preserve">
+    <value>B. mostowa</value>
+  </data>
+  <data name="BridgeWorker" xml:space="preserve">
+    <value>Mostowcy</value>
+  </data>
+  <data name="BulldozerMachine" xml:space="preserve">
+    <value>Spycharka</value>
+  </data>
+  <data name="Cloud" xml:space="preserve">
+    <value>Pochmurnie</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Uwagi do raportu</value>
+  </data>
+  <data name="CompactorMachine" xml:space="preserve">
+    <value>Zagęszczarka</value>
+  </data>
+  <data name="ConcreteMixerTruck" xml:space="preserve">
+    <value>Betonowóz</value>
+  </data>
+  <data name="ConcretePump" xml:space="preserve">
+    <value>Pompa do betonu</value>
+  </data>
+  <data name="Crane" xml:space="preserve">
+    <value>Dźwig / Podnośnik</value>
+  </data>
+  <data name="DailyReport" xml:space="preserve">
+    <value>Raport dzienny</value>
+  </data>
+  <data name="Digging" xml:space="preserve">
+    <value>Koparka</value>
+  </data>
+  <data name="DumpTruck" xml:space="preserve">
+    <value>Wywrotka</value>
+  </data>
+  <data name="Fog" xml:space="preserve">
+    <value>Mgliście</value>
+  </data>
   <data name="Greeting" xml:space="preserve">
     <value>Witaj w aplikacji Raport Dzienny!</value>
+  </data>
+  <data name="LoaderMachine" xml:space="preserve">
+    <value>Ładowarka</value>
+  </data>
+  <data name="Milling" xml:space="preserve">
+    <value>Frezarka</value>
   </data>
   <data name="Note" xml:space="preserve">
     <value>Zanotuj dzienny stan budowy</value>
@@ -129,17 +180,62 @@
   <data name="Npage" xml:space="preserve">
     <value>Dalej</value>
   </data>
+  <data name="Other" xml:space="preserve">
+    <value>Inni</value>
+  </data>
+  <data name="OtherIndustry" xml:space="preserve">
+    <value>Inne b.</value>
+  </data>
+  <data name="PilingMachine" xml:space="preserve">
+    <value>Palownica</value>
+  </data>
+  <data name="Rain" xml:space="preserve">
+    <value>Deszczowo</value>
+  </data>
   <data name="ReportDate" xml:space="preserve">
     <value>Data raportu</value>
   </data>
   <data name="ReportNumber" xml:space="preserve">
     <value>Numer raportu</value>
   </data>
+  <data name="RoadGrader" xml:space="preserve">
+    <value>Równiarka</value>
+  </data>
+  <data name="RoadIndustry" xml:space="preserve">
+    <value>B. drogowa</value>
+  </data>
+  <data name="Roadman" xml:space="preserve">
+    <value>Drogowcy</value>
+  </data>
+  <data name="RoadMiniExcavator" xml:space="preserve">
+    <value>Mini koparka / HDS</value>
+  </data>
+  <data name="RoadPaver" xml:space="preserve">
+    <value>Rozściełacz</value>
+  </data>
+  <data name="RoadRoller" xml:space="preserve">
+    <value>Walec</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
   <data name="Sky" xml:space="preserve">
     <value>Wybierz stan pogodowy</value>
   </data>
+  <data name="Sprinkler" xml:space="preserve">
+    <value>Skrapiarka</value>
+  </data>
+  <data name="Storm" xml:space="preserve">
+    <value>Burzowo</value>
+  </data>
   <data name="Sunny" xml:space="preserve">
     <value>Słonecznie</value>
+  </data>
+  <data name="Sweeper" xml:space="preserve">
+    <value>Zamiatarka</value>
+  </data>
+  <data name="TypeOfEquipment" xml:space="preserve">
+    <value>Sprzęt</value>
   </data>
   <data name="WeatherNow" xml:space="preserve">
     <value>Pogoda</value>

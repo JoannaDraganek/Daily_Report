@@ -14,6 +14,8 @@ using PdfSharpCore.Pdf;
 using PdfSharpCore.Drawing;
 using PdfSharpCore.Fonts;
 using DinkToPdf;
+using Daily_Report.Helpers;
+using Daily_Report.Resources;
 
 namespace Daily_Report
 {
@@ -27,7 +29,11 @@ namespace Daily_Report
         int roadmanWorkers = 0;
         int bridgeWorkers = 0;
         int otherWorkers = 0;
-        int millingMachine = 0;
+
+        int millingMachineRoad = 0;
+        int millingMachineBridge = 0;
+        int millingMachineOther =  0;
+
         int excavatorMachine = 0;
         int loaderMachine = 0;
         int bulldozerMachine = 0;
@@ -38,6 +44,13 @@ namespace Daily_Report
         int grader = 0;
         int paver = 0;
         int miniExcavator = 0;
+        int crane = 0;
+        int concretePump = 0;
+        int concreteMixerTruck = 0;
+        int pilingMachine = 0;
+        int sprinkler = 0;
+        int sweeper = 0;
+        int auxiliaryEquipment = 0;
 
 
         CancellationTokenSource cts;
@@ -80,6 +93,15 @@ namespace Daily_Report
 
         protected override async void OnAppearing()
         {
+            this.Sky.ItemsSource = new string[]
+            {
+                AppResources.Sunny,
+                AppResources.Cloud,
+                AppResources.Rain,
+                AppResources.Storm,
+                AppResources.Fog
+            };
+
             var location = await GetCurrentLocation();
             var client = new WebClient();
             client.UseDefaultCredentials = true;
@@ -105,7 +127,7 @@ namespace Daily_Report
             };
         }
 
-           
+
 
 
         //Drogowcy
@@ -175,7 +197,7 @@ namespace Daily_Report
             OtherWorkers.Text = otherWorkers.ToString();
         }
 
-        //Koparka
+        //Koparka Excavator
         private void ExcavatorQuantity_Clicked(object sender, EventArgs e)
         {
             excavatorMachine++;
@@ -191,20 +213,51 @@ namespace Daily_Report
         }
 
 
-        //Frezarka
-        private void MillingMashineQuantity_Clicked(object sender, EventArgs e)
+        //Frezarka Milling Mashine
+        private void MillingMashineQuantityRoad_Clicked(object sender, EventArgs e)
         {
-            millingMachine++;
-            MillingMachineQuantity.Text = millingMachine.ToString();
+            millingMachineRoad++;
+            MillingMachineQuantityRoad.Text = millingMachineRoad.ToString();
         }
 
-        private void MillingMashineLess_Clicked(object sender, EventArgs e)
+        private void MillingMashineLessRoad_Clicked(object sender, EventArgs e)
         {
-            if (millingMachine > 0)
+            if (millingMachineRoad > 0)
             {
-                millingMachine--;
+                millingMachineRoad--;
             };
-            MillingMachineQuantity.Text = millingMachine.ToString();
+            MillingMachineQuantityRoad.Text = millingMachineRoad.ToString();
+        }
+
+        private void MillingMashineQuantityBridge_Clicked(object sender, EventArgs e)
+        {
+            millingMachineBridge++;
+            MillingMachineQuantityBridge.Text = millingMachineBridge.ToString();
+        }
+
+        private void MillingMashineLessBridge_Clicked(object sender, EventArgs e)
+        {
+            if (millingMachineBridge > 0)
+            {
+                millingMachineBridge--;
+            };
+            MillingMachineQuantityBridge.Text = millingMachineBridge.ToString();
+        }
+
+        private void MillingMashineQuantityOther_Clicked(object sender, EventArgs e)
+        {
+            millingMachineOther++;
+            MillingMachineQuantityOther.Text = millingMachineOther.ToString();
+        }
+
+        private void MillingMashineLessOther_Clicked(object sender, EventArgs e)
+        {
+            if (millingMachineOther > 0)
+            {
+                millingMachineOther--;
+            };
+            MillingMachineQuantityOther.Text = millingMachineOther.ToString();
+
         }
 
 
@@ -336,7 +389,7 @@ namespace Daily_Report
             PaverQuantity.Text = paver.ToString();
         }
 
-        // Mini koparka mini excavator
+        // Mini koparka/HDS mini excavator
         private void MiniExcavatorQuantity_Clicked(object sender, EventArgs e)
         {
             miniExcavator++;
@@ -352,6 +405,117 @@ namespace Daily_Report
             MiniExcavatorQuantity.Text = miniExcavator.ToString();
         }
 
+        // Dźwig/Podnośnik  Crane
+        private void CraneQuantity_Clicked(object sender, EventArgs e)
+        {
+            crane++;
+            CraneQuantity.Text = crane.ToString();
+        }
+
+        private void CraneLess_Clicked(object sender, EventArgs e)
+        {
+            if (crane > 0)
+            {
+                crane--;
+            };
+            CraneQuantity.Text = crane.ToString();
+        }
+
+        // Pompa do betonu  Concrete pump
+        private void ConcretePumpQuantity_Clicked(object sender, EventArgs e)
+        {
+            concretePump++;
+            ConcretePumpQuantity.Text = concretePump.ToString();
+        }
+
+        private void ConcretePumpLess_Clicked(object sender, EventArgs e)
+        {
+            if (concretePump > 0)
+            {
+                concretePump--;
+            };
+            ConcretePumpQuantity.Text = concretePump.ToString();
+        }
+
+        // Betonowóz  Concrete mixer truck
+        private void ConcreteMixerTruckQuantity_Clicked(object sender, EventArgs e)
+        {
+            concreteMixerTruck++;
+            ConcreteMixerTruckQuantity.Text = concreteMixerTruck.ToString();
+        }
+
+        private void ConcreteMixerTruckLess_Clicked(object sender, EventArgs e)
+        {
+            if (concreteMixerTruck > 0)
+            {
+                concreteMixerTruck--;
+            };
+            ConcreteMixerTruckQuantity.Text = concreteMixerTruck.ToString();
+        }
+
+        // Palownica  Piling machine
+        private void PilingMachineQuantity_Clicked(object sender, EventArgs e)
+        {
+            pilingMachine++;
+            PilingMachineQuantity.Text = pilingMachine.ToString();
+        }
+
+        private void PilingMachineLess_Clicked(object sender, EventArgs e)
+        {
+            if (pilingMachine > 0)
+            {
+                pilingMachine--;
+            };
+            PilingMachineQuantity.Text = pilingMachine.ToString();
+        }
+
+        // Skrapiarka  Sprinkler
+        private void SprinklerQuantity_Clicked(object sender, EventArgs e)
+        {
+            sprinkler++;
+            SprinklerQuantity.Text = sprinkler.ToString();
+        }
+
+        private void SprinklerLess_Clicked(object sender, EventArgs e)
+        {
+            if (sprinkler > 0)
+            {
+                sprinkler--;
+            };
+            SprinklerQuantity.Text = sprinkler.ToString();
+        }
+
+        // Zamiatarka  Sweeper
+        private void SweeperQuantity_Clicked(object sender, EventArgs e)
+        {
+            sweeper++;
+            SweeperQuantity.Text = sweeper.ToString();
+        }
+
+        private void SweeperLess_Clicked(object sender, EventArgs e)
+        {
+            if (sweeper > 0)
+            {
+                sweeper--;
+            };
+            SweeperQuantity.Text = sweeper.ToString();
+        }
+
+        // Sprzęt pomocniczy (inne)  Auxiliary equipment (other)
+        private void AuxiliaryEquipmentQuantity_Clicked(object sender, EventArgs e)
+        {
+            auxiliaryEquipment++;
+            AuxiliaryEquipmentQuantity.Text = auxiliaryEquipment.ToString();
+        }
+
+        private void AuxiliaryEquipmentLess_Clicked(object sender, EventArgs e)
+        {
+            if (auxiliaryEquipment > 0)
+            {
+                auxiliaryEquipment--;
+            };
+            AuxiliaryEquipmentQuantity.Text = auxiliaryEquipment.ToString();
+        }
 
 
         private void SaveButton_Clicked(object sender, EventArgs e)

@@ -21,21 +21,32 @@ namespace Daily_Report.Helpers
             if (Text == null)
                 return "";
 
+            return Translation.Translate(Text);
+        }
+    }
+
+    public static class Translation
+    {
+        const string ResourceId = "Daily_Report.Resources.AppResources";
+        static readonly Lazy<ResourceManager> resmgr = new Lazy<ResourceManager>(
+            () => new ResourceManager(ResourceId, typeof(TranslateExtension).GetTypeInfo().Assembly));
+
+        public static string Translate(string textToTranslate)
+        {
             var ci = CrossMultilingual.Current.CurrentCultureInfo;
 
-            var translation = resmgr.Value.GetString(Text, ci);
-
+            var translation = resmgr.Value.GetString(textToTranslate, ci);
             if (translation == null)
             {
-
 #if DEBUG
                 throw new ArgumentException(
-                    String.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
+                    String.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", textToTranslate, ResourceId, ci.Name),
                     "Text");
 #else
-                translation = Text; // returns the key, which GETS DISPLAYED TO THE USER
+                translation = textToTranslate; // returns the key, which GETS DISPLAYED TO THE USER
 #endif
             }
+
             return translation;
         }
     }
