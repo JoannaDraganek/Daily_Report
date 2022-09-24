@@ -123,8 +123,8 @@
   <data name="BackhoeLoader" xml:space="preserve">
     <value>Koparko-ładowarka</value>
   </data>
-  <data name="BridgeIndustry" xml:space="preserve">
-    <value>B. mostowa</value>
+  <data name="Bridges" xml:space="preserve">
+    <value>Mosty</value>
   </data>
   <data name="BridgeWorker" xml:space="preserve">
     <value>Mostowcy</value>
@@ -159,6 +159,12 @@
   <data name="DumpTruck" xml:space="preserve">
     <value>Wywrotka</value>
   </data>
+  <data name="Equipment" xml:space="preserve">
+    <value>Sprzęt</value>
+  </data>
+  <data name="Equipment and Workers" xml:space="preserve">
+    <value>Sprzęt i pracownicy</value>
+  </data>
   <data name="Fog" xml:space="preserve">
     <value>Mgliście</value>
   </data>
@@ -183,8 +189,8 @@
   <data name="Other" xml:space="preserve">
     <value>Inni</value>
   </data>
-  <data name="OtherIndustry" xml:space="preserve">
-    <value>Inne b.</value>
+  <data name="Others" xml:space="preserve">
+    <value>Inni</value>
   </data>
   <data name="PilingMachine" xml:space="preserve">
     <value>Palownica</value>
@@ -201,9 +207,6 @@
   <data name="RoadGrader" xml:space="preserve">
     <value>Równiarka</value>
   </data>
-  <data name="RoadIndustry" xml:space="preserve">
-    <value>B. drogowa</value>
-  </data>
   <data name="Roadman" xml:space="preserve">
     <value>Drogowcy</value>
   </data>
@@ -215,6 +218,9 @@
   </data>
   <data name="RoadRoller" xml:space="preserve">
     <value>Walec</value>
+  </data>
+  <data name="Roads" xml:space="preserve">
+    <value>Drogi</value>
   </data>
   <data name="SaveButton" xml:space="preserve">
     <value>Zapisz</value>
@@ -234,10 +240,10 @@
   <data name="Sweeper" xml:space="preserve">
     <value>Zamiatarka</value>
   </data>
-  <data name="TypeOfEquipment" xml:space="preserve">
-    <value>Sprzęt</value>
-  </data>
   <data name="WeatherNow" xml:space="preserve">
     <value>Pogoda</value>
+  </data>
+  <data name="Workers" xml:space="preserve">
+    <value>Pracownicy</value>
   </data>
 </root>

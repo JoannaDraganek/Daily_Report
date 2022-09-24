@@ -79,11 +79,11 @@ namespace Daily_Report.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bridge industry.
+        ///   Looks up a localized string similar to Bridges.
         /// </summary>
-        internal static string BridgeIndustry {
+        internal static string Bridges {
             get {
-                return ResourceManager.GetString("BridgeIndustry", resourceCulture);
+                return ResourceManager.GetString("Bridges", resourceCulture);
             }
         }
         
@@ -187,6 +187,24 @@ namespace Daily_Report.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Equipment.
+        /// </summary>
+        internal static string Equipment {
+            get {
+                return ResourceManager.GetString("Equipment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Equipment and Workers.
+        /// </summary>
+        internal static string Equipment_and_Workers {
+            get {
+                return ResourceManager.GetString("Equipment and Workers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fog.
         /// </summary>
         internal static string Fog {
@@ -259,11 +277,11 @@ namespace Daily_Report.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Other Industry.
+        ///   Looks up a localized string similar to Others.
         /// </summary>
-        internal static string OtherIndustry {
+        internal static string Others {
             get {
-                return ResourceManager.GetString("OtherIndustry", resourceCulture);
+                return ResourceManager.GetString("Others", resourceCulture);
             }
         }
         
@@ -313,15 +331,6 @@ namespace Daily_Report.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Road industry.
-        /// </summary>
-        internal static string RoadIndustry {
-            get {
-                return ResourceManager.GetString("RoadIndustry", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Road Workers.
         /// </summary>
         internal static string Roadman {
@@ -354,6 +363,15 @@ namespace Daily_Report.Resources {
         internal static string RoadRoller {
             get {
                 return ResourceManager.GetString("RoadRoller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Roads.
+        /// </summary>
+        internal static string Roads {
+            get {
+                return ResourceManager.GetString("Roads", resourceCulture);
             }
         }
         
@@ -412,20 +430,20 @@ namespace Daily_Report.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Equipment.
-        /// </summary>
-        internal static string TypeOfEquipment {
-            get {
-                return ResourceManager.GetString("TypeOfEquipment", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Weather.
         /// </summary>
         internal static string WeatherNow {
             get {
                 return ResourceManager.GetString("WeatherNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Workers.
+        /// </summary>
+        internal static string Workers {
+            get {
+                return ResourceManager.GetString("Workers", resourceCulture);
             }
         }
     }

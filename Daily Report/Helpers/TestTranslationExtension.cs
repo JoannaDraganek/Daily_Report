@@ -10,10 +10,6 @@ namespace Daily_Report.Helpers
     [ContentProperty("Text")]
     public class TranslateExtension : IMarkupExtension
     {
-        const string ResourceId = "Daily_Report.Resources.AppResources";
-
-        static readonly Lazy<ResourceManager> resmgr = new Lazy<ResourceManager>(() => new ResourceManager(ResourceId, typeof(TranslateExtension).GetTypeInfo().Assembly));
-
         public string Text { get; set; }
 
         public object ProvideValue(IServiceProvider serviceProvider)

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:Daily_Report.Helpers"
+             x:Class="Daily_Report.Equipment.WorkersEquipmentPage"
+            BackgroundColor="{DynamicResource PageBackgroundColor}">
+    
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+
+
+                <Frame Grid.Column="0" Grid.Row="1" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                    <Label Grid.Column="0" Grid.Row="1" x:Name="OnTheRoad" Text="{i18n:Translate Roadman}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="1" BackgroundColor="{DynamicResource SecondaryColor}" Padding="20" CornerRadius="35" x:Name="RoadmanQuantity" Text="+" Clicked="RoadmanQuantity_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small" />
+                <Button Grid.Column="2" Grid.Row="1" BackgroundColor="{DynamicResource SecondaryColor}" Padding="20" CornerRadius="30" x:Name="RoadmanLess" Text="-" Clicked="RoadmanLess_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small" />
+                <Button Grid.Column="3" Grid.Row="1" BackgroundColor="{DynamicResource SecondaryColor}" Padding="20" CornerRadius="30" x:Name="RoadmanPlusFive" Text="+5" Clicked="PlusFiveRoadman_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small" />
+
+
+
+                <Frame Grid.Column="0" Grid.Row="2" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                    <Label Grid.Column="0" Grid.Row="2" x:Name="BridgeWorker" Text="{i18n:Translate BridgeWorker}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small" />
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="2" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="35" x:Name="BridgeWorkers" Text="+" Clicked="BridgeWorkersQuantity_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small" />
+                <Button Grid.Column="2" Grid.Row="2" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="30" x:Name="BridgeWorkersLess" Text="-" Clicked="BridgeWorkersLess_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small" />
+                <Button Grid.Column="3" Grid.Row="2" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="30" x:Name="BridgeWorkersPlusFive" Text="+5" Clicked="PlusFiveBridgeWorkers_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small" />
+
+
+
+                <Frame Grid.Column="0" Grid.Row="3" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                    <Label Grid.Column="0" Grid.Row="3" x:Name="Other" Text="{i18n:Translate Other}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
+                </Frame>
+                <Button Grid.Column="1" Grid.Row="3" BackgroundColor="{DynamicResource SecondaryColor} " Padding="10" CornerRadius="35" x:Name="OtherWorkers" Text="+" Clicked="OtherWorkersQuantity_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                <Button Grid.Column="2" Grid.Row="3" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="20"  x:Name="OtherWorkersLess" Text="-" Clicked="OtherWorkersLess_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                <Button Grid.Column="3" Grid.Row="3" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="20"  x:Name="OtherWorkersPlusFive" Text="+5" Clicked="PlusFiveOtherWorkers_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+            </Grid>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

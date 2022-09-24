@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Daily_Report.Equipment"
+             xmlns:i18n="clr-namespace:Daily_Report.Helpers"
+             x:Class="Daily_Report.Equipment.EquipmentTabs"
+             Title="{i18n:Translate Equipment}"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <NavigationPage Title="{i18n:Translate Workers}">
+        <x:Arguments>
+            <views:WorkersEquipmentPage/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="{i18n:Translate Roads}">
+        <x:Arguments>
+            <views:RoadEquipmentPage/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="{i18n:Translate Bridges}">
+        <x:Arguments>
+            <views:BridgeEquipmentPage/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="{i18n:Translate Others}">
+        <x:Arguments>
+            <views:OtherEquipmentPage/>
+        </x:Arguments>
+    </NavigationPage>
+
+
+</TabbedPage>

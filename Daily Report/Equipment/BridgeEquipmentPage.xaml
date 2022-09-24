@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:Daily_Report.Helpers"
+             x:Class="Daily_Report.Equipment.BridgeEquipmentPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}"
+             >
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+
+                    <Frame Grid.Column="0" Grid.Row="0" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="0" x:Name="MillingBridge" Padding="10" Text="{i18n:Translate Milling}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+
+                    <Button Grid.Column="1" Grid.Row="0" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="MillingMachineQuantityBridge" Text="+" Clicked="MillingMashineQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="0" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10"  CornerRadius="25" x:Name="MillingMachineLessBridge" Text="-" Clicked="MillingMashineLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="1" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="1" x:Name="DiggingBridge" Text="{i18n:Translate Digging}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="1" BackgroundColor="{DynamicResource SecondaryColor}" CornerRadius="25" x:Name="ExcavatorQuantityBridge" Text="+" Clicked="ExcavatorQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="1" BackgroundColor="{DynamicResource SecondaryColor}"  CornerRadius="25" x:Name="ExcavatorLessBridge" Text="-" Clicked="ExcavatorLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+
+                    <Frame Grid.Column="0" Grid.Row="2" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="2" x:Name="LoaderMachineBridge" Padding="10" Text="{i18n:Translate LoaderMachine}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="2" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="LoaderQuantityBridge" Text="+" Clicked="LoaderQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="2" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="LoaderLessBridge" Text="-" Clicked="LoaderLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="3" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="3" x:Name="BulldozerMachineBridge" Text="{i18n:Translate BulldozerMachine}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="3" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="BulldozerQuantityBridge" Text="+" Clicked="BulldozerQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="3" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="BulldozerLessBridge" Text="-" Clicked="BulldozerLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="4" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="4" x:Name="DumpTruckBridge" Text="{i18n:Translate DumpTruck}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="4" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="DumpTruckQuantityBridge" Text="+" Clicked="DumpTruckQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="4" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="DumpTruckLessBridge" Text="-" Clicked="DumpTruckLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="5" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="5" x:Name="BackhoeLoaderBridge" Text="{i18n:Translate BackhoeLoader}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="5" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="BackhoeLoaderQuantityBridge" Text="+" Clicked="BackhoeLoaderQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="5" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="BackhoeLoaderLessBridge" Text="-" Clicked="BackhoeLoaderLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="6" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="6" x:Name="CompactorMachineBridge" Text="{i18n:Translate CompactorMachine}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="6" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="CompactorQuantityBridge" Text="+" Clicked="CompactorQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="6" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="CompactorLessBridge" Text="-" Clicked="CompactorLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="7" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="7" x:Name="RoadRollerBridge" Text="{i18n:Translate RoadRoller}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="7" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="RollerQuantityBridge" Text="+" Clicked="RollerQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="7" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="RollerLessBridge" Text="-" Clicked="RollerLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="8" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="8" x:Name="RoadGraderBridge" Text="{i18n:Translate RoadGrader}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="8" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="GraderQuantityBridge" Text="+" Clicked="GraderQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="8" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="GraderLessBridge" Text="-" Clicked="GraderLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="9" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="9" x:Name="RoadPaverBridge" Text="{i18n:Translate RoadPaver}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="9" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="PaverQuantityBridge" Text="+" Clicked="PaverQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="9" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="PaverLessBridge" Text="-" Clicked="PaverLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="10" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="10" x:Name="RoadMiniExcavatorBridge" Text="{i18n:Translate RoadMiniExcavator}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="10" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="MiniExcavatorQuantityBridge" Text="+" Clicked="MiniExcavatorQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="10" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="MiniExcavatorLessBridge" Text="-" Clicked="MiniExcavatorLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="11" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="11" x:Name="CraneBridge" Text="{i18n:Translate Crane}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="11" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="CraneQuantityBridge" Text="+" Clicked="CraneQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="11" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="CraneLessBridge" Text="-" Clicked="CraneLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="11" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="11" x:Name="ConcretePumpBridge" Text="{i18n:Translate ConcretePump}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="11" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="ConcretePumpQuantityBridge" Text="+" Clicked="ConcretePumpQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="11" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="ConcretePumpLessBridge" Text="-" Clicked="ConcretePumpLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="12" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="10">
+                        <Label Grid.Column="0" Grid.Row="12" x:Name="ConcreteMixerTruckBridge" Text="{i18n:Translate ConcreteMixerTruck}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="12" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="ConcreteMixerTruckQuantityBridge" Text="+" Clicked="ConcreteMixerTruckQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="12" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="ConcreteMixerTruckLessBridge" Text="-" Clicked="ConcreteMixerTruckLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="13" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="13" x:Name="PilingMachineBridge" Text="{i18n:Translate PilingMachine}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="13" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="PilingMachineQuantityBridge" Text="+" Clicked="PilingMachineQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="13" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="PilingMachineLessBridge" Text="-" Clicked="PilingMachineLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="14" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="14" x:Name="SprinklerBridge" Text="{i18n:Translate Sprinkler}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="14" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="SprinklerQuantityBridge" Text="+" Clicked="SprinklerQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="14" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="SprinklerLessBridge" Text="-" Clicked="SprinklerLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+                    <Frame Grid.Column="0" Grid.Row="15" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="15" x:Name="SweeperBridge" Text="{i18n:Translate Sweeper}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="15" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="SweeperQuantityBridge" Text="+" Clicked="SweeperQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="15" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="SweeperLessBridge" Text="-" Clicked="SweeperLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+
+                    <Frame Grid.Column="0" Grid.Row="16" BackgroundColor="{DynamicResource PrimaryColor}" Padding="10" CornerRadius="0">
+                        <Label Grid.Column="0" Grid.Row="16" x:Name="AuxiliaryEquipmentBridge" Text="{i18n:Translate AuxiliaryEquipment}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    </Frame>
+                    <Button Grid.Column="1" Grid.Row="16" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="AuxiliaryEquipmentQuantityBridge" Text="+" Clicked="AuxiliaryEquipmentQuantityBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+                    <Button Grid.Column="2" Grid.Row="16" BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" CornerRadius="25" x:Name="AuxiliaryEquipmentLessBridge" Text="-" Clicked="AuxiliaryEquipmentLessBridge_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
+
+                </Grid>
+            </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -2,31 +2,32 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:Daily_Report.Helpers" 
-             x:Class="Daily_Report.MainPage">
+             x:Class="Daily_Report.MainPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
 
     <ScrollView>
 
         <StackLayout Margin="20">
-            <Frame BackgroundColor="#2140b0" Padding="15" CornerRadius="0">
+            <Frame BackgroundColor="{DynamicResource LabelColor}" Padding="10" CornerRadius="0">
                 <Label x:Name="DailyReport" Text="{i18n:Translate DailyReport}" HorizontalTextAlignment="Center" TextColor="White" FontSize="Medium"/>
             </Frame>
 
-            <Frame BackgroundColor="#5193fc" Padding="15" CornerRadius="20">
+            <Frame BackgroundColor="{DynamicResource LabelColor}" Padding="15" CornerRadius="20">
                 <Entry Placeholder="" x:Name="Number" HorizontalTextAlignment="Center" Text="{i18n:Translate ReportNumber}" TextColor="White" FontSize="Small"/>
             </Frame>
 
-            <Frame BackgroundColor="#525354" Padding="15" CornerRadius="0">
+            <Frame BackgroundColor="{DynamicResource PrimaryColor}" Padding="15" CornerRadius="0">
                 <Label x:Name="ReportDate" Text="{i18n:Translate ReportDate}" HorizontalTextAlignment="Center" TextColor="White" FontSize="Small"/>
             </Frame>
-            <Frame BackgroundColor="#5193fc" Padding="15" CornerRadius="20">
+            <Frame BackgroundColor="{DynamicResource PrimaryColor}" Padding="15" CornerRadius="20">
                 <DatePicker Date="{Binding Date}" HorizontalOptions="Center" FontSize="Small"/>
             </Frame>
-            <Frame BackgroundColor="#525354" Padding="20" CornerRadius="0">
+            <Frame BackgroundColor="{DynamicResource LabelColor}" Padding="15" CornerRadius="0">
                 <Label x:Name="WeatherNow" Text="{i18n:Translate WeatherNow}" HorizontalTextAlignment="Center" TextColor="White" FontSize="Small"/>
             </Frame>
 
 
-            <Frame BackgroundColor="#5193fc" Padding="20" CornerRadius="15">
+            <Frame BackgroundColor="{DynamicResource LabelColor}" Padding="15" CornerRadius="15">
 
                 <Picker x:Name="Sky"
         Title="{i18n:Translate Sky}" 
@@ -34,237 +35,24 @@
                         FontSize="Small"
         TitleColor="White" >
                 </Picker>
-
+                         
             </Frame>
 
 
-
-
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="1" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="1" x:Name="OnTheRoad" Text="{i18n:Translate Roadman}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="1" BackgroundColor="#476dfc " Padding="20" CornerRadius="35" x:Name="RoadmanQuantity" Text="+" Clicked="RoadmanQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small" />
-                <Button Grid.Column="2" Grid.Row="1" BackgroundColor="#5193fc" Padding="20" CornerRadius="30" x:Name="RoadmanLess" Text="-" Clicked="RoadmanLess_Clicked" TextColor="WhiteSmoke" FontSize="Small" />
-                <Button Grid.Column="3" Grid.Row="1" BackgroundColor="#325dfc" Padding="20" CornerRadius="30" x:Name="RoadmanPlusFive" Text="+5" Clicked="PlusFiveRoadman_Clicked" TextColor="WhiteSmoke" FontSize="Small" />
-
-
-
-                <Frame Grid.Column="0" Grid.Row="2" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="2" x:Name="BridgeWorker" Text="{i18n:Translate BridgeWorker}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small" />
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="2" BackgroundColor="#476dfc" Padding="10" CornerRadius="35" x:Name="BridgeWorkers" Text="+" Clicked="BridgeWorkersQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small" />
-                <Button Grid.Column="2" Grid.Row="2" BackgroundColor="#5193fc" Padding="10" CornerRadius="30" x:Name="BridgeWorkersLess" Text="-" Clicked="BridgeWorkersLess_Clicked" TextColor="WhiteSmoke" FontSize="Small" />
-                <Button Grid.Column="3" Grid.Row="2" BackgroundColor="#325dfc" Padding="10" CornerRadius="30" x:Name="BridgeWorkersPlusFive" Text="+5" Clicked="PlusFiveBridgeWorkers_Clicked" TextColor="WhiteSmoke" FontSize="Small" />
-
-
-
-                <Frame Grid.Column="0" Grid.Row="3" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="3" x:Name="Other" Text="{i18n:Translate Other}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="3" BackgroundColor="#476dfc " Padding="10" CornerRadius="35" x:Name="OtherWorkers" Text="+" Clicked="OtherWorkersQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="2" Grid.Row="3" BackgroundColor="#5193fc" Padding="10" CornerRadius="20"  x:Name="OtherWorkersLess" Text="-" Clicked="OtherWorkersLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="3" Grid.Row="3" BackgroundColor="#325dfc" Padding="10" CornerRadius="20"  x:Name="OtherWorkersPlusFive" Text="+5" Clicked="PlusFiveOtherWorkers_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-            </Grid>
+                              
 
             <Label>  </Label>
+
+            <Button BackgroundColor="#2140b0" Padding="20" CornerRadius="30" x:Name="EquipmentPage" Text="{i18n:Translate Equipment and Workers}" Clicked="Equipment_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
+
+
             
-            
-            <Grid>
-                <Frame Grid.Column="0" Grid.Row="0" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="0" x:Name="TypeOfEquipment" Padding="10" Text="{i18n:Translate TypeOfEquipment}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                
-                <Frame Grid.Column="1" Grid.Row="0" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="1" Grid.Row="0" x:Name="RoadIndustry" Padding="10" Text="{i18n:Translate RoadIndustry}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-
-                <Frame Grid.Column="2" Grid.Row="0" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="2" Grid.Row="0" x:Name="BridgeIndustry" Padding="10" Text="{i18n:Translate BridgeIndustry}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-
-                <Frame Grid.Column="3" Grid.Row="0" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="3" Grid.Row="0" x:Name="OtherIndustry" Padding="10" Text="{i18n:Translate OtherIndustry}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-
-          
-                
-                
-                
-                
-                <Frame Grid.Column="0" Grid.Row="1" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="1" x:Name="Milling" Padding="10" Text="{i18n:Translate Milling}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Frame Grid.Column="0" Grid.Row="2" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                </Frame>
-                
-                <Button Grid.Column="1" Grid.Row="1" BackgroundColor="#476dfc " Padding="10" CornerRadius="25" x:Name="MillingMachineQuantityRoad" Text="+" Clicked="MillingMashineQuantityRoad_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="2" BackgroundColor="#2140b0" Padding="10"  CornerRadius="25" x:Name="MillingMachineLessRoad" Text="-" Clicked="MillingMashineLessRoad_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-                <Button Grid.Column="2" Grid.Row="1" BackgroundColor="#476dfc " Padding="10" CornerRadius="25" x:Name="MillingMachineQuantityBridge" Text="+" Clicked="MillingMashineQuantityBridge_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="2" Grid.Row="2" BackgroundColor="#2140b0" Padding="10"  CornerRadius="25" x:Name="MillingMachineLessBridge" Text="-" Clicked="MillingMashineLessBridge_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-             
-                <Button Grid.Column="3" Grid.Row="1" BackgroundColor="#476dfc " Padding="10" CornerRadius="25" x:Name="MillingMachineQuantityOther" Text="+" Clicked="MillingMashineQuantityOther_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="3" Grid.Row="2" BackgroundColor="#2140b0" Padding="10"  CornerRadius="25" x:Name="MillingMachineLessOther" Text="-" Clicked="MillingMashineLessOther_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="4" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="4" x:Name="Digging" Text="{i18n:Translate Digging}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="5" BackgroundColor="#476dfc " CornerRadius="25" x:Name="ExcavatorQuantity" Text="+" Clicked="ExcavatorQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="6" BackgroundColor="#2140b0"  CornerRadius="25" x:Name="ExcavatorLess" Text="-" Clicked="ExcavatorLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="7" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="7" x:Name="LoaderMachine" Padding="10" Text="{i18n:Translate LoaderMachine}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="8" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="LoaderQuantity" Text="+" Clicked="LoaderQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="9" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="LoaderLess" Text="-" Clicked="LoaderLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="10" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="10" x:Name="BulldozerMachine" Text="{i18n:Translate BulldozerMachine}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="11" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="BulldozerQuantity" Text="+" Clicked="BulldozerQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="12" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="BulldozerLess" Text="-" Clicked="BulldozerLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-
-                <Frame Grid.Column="0" Grid.Row="13" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="13" x:Name="DumpTruck" Text="{i18n:Translate DumpTruck}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="14" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="DumpTruckQuantity" Text="+" Clicked="DumpTruckQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="15" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="DumpTruckLess" Text="-" Clicked="DumpTruckLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-
-                <Frame Grid.Column="0" Grid.Row="16" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="16" x:Name="BackhoeLoader" Text="{i18n:Translate BackhoeLoader}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="17" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="BackhoeLoaderQuantity" Text="+" Clicked="BackhoeLoaderQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="18" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="BackhoeLoaderLess" Text="-" Clicked="BackhoeLoaderLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="19" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="19" x:Name="CompactorMachine" Text="{i18n:Translate CompactorMachine}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="20" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="CompactorQuantity" Text="+" Clicked="CompactorQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="21" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="CompactorLess" Text="-" Clicked="CompactorLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-
-                <Frame Grid.Column="0" Grid.Row="22" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="22" x:Name="RoadRoller" Text="{i18n:Translate RoadRoller}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="23" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="RollerQuantity" Text="+" Clicked="RollerQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="24" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="RollerLess" Text="-" Clicked="RollerLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-                <Frame Grid.Column="0" Grid.Row="25" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="25" x:Name="RoadGrader" Text="{i18n:Translate RoadGrader}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="26" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="GraderQuantity" Text="+" Clicked="GraderQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="27" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="GraderLess" Text="-" Clicked="GraderLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="28" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="28" x:Name="RoadPaver" Text="{i18n:Translate RoadPaver}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="29" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="PaverQuantity" Text="+" Clicked="PaverQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="30" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="PaverLess" Text="-" Clicked="PaverLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="31" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="31" x:Name="RoadMiniExcavator" Text="{i18n:Translate RoadMiniExcavator}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="32" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="MiniExcavatorQuantity" Text="+" Clicked="MiniExcavatorQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="33" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="MiniExcavatorLess" Text="-" Clicked="MiniExcavatorLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="34" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="34" x:Name="Crane" Text="{i18n:Translate Crane}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="35" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="CraneQuantity" Text="+" Clicked="CraneQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="36" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="CraneLess" Text="-" Clicked="CraneLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="37" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="37" x:Name="ConcretePump" Text="{i18n:Translate ConcretePump}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="38" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="ConcretePumpQuantity" Text="+" Clicked="ConcretePumpQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="39" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="ConcretePumpLess" Text="-" Clicked="ConcretePumpLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="40" BackgroundColor="#525354" Padding="10" CornerRadius="10">
-                    <Label Grid.Column="0" Grid.Row="40" x:Name="ConcreteMixerTruck" Text="{i18n:Translate ConcreteMixerTruck}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="41" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="ConcreteMixerTruckQuantity" Text="+" Clicked="ConcreteMixerTruckQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="42" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="ConcreteMixerTruckLess" Text="-" Clicked="ConcreteMixerTruckLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="43" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="43" x:Name="PilingMachine" Text="{i18n:Translate PilingMachine}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="44" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="PilingMachineQuantity" Text="+" Clicked="PilingMachineQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="45" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="PilingMachineLess" Text="-" Clicked="PilingMachineLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="46" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="46" x:Name="Sprinkler" Text="{i18n:Translate Sprinkler}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="47" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="SprinklerQuantity" Text="+" Clicked="SprinklerQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="48" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="SprinklerLess" Text="-" Clicked="SprinklerLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="49" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="49" x:Name="Sweeper" Text="{i18n:Translate Sweeper}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="50" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="SweeperQuantity" Text="+" Clicked="SweeperQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="51" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="SweeperLess" Text="-" Clicked="SweeperLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-                <Frame Grid.Column="0" Grid.Row="52" BackgroundColor="#525354" Padding="10" CornerRadius="0">
-                    <Label Grid.Column="0" Grid.Row="52" x:Name="AuxiliaryEquipment" Text="{i18n:Translate AuxiliaryEquipment}" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" FontSize="Small"/>
-                </Frame>
-                <Button Grid.Column="1" Grid.Row="53" BackgroundColor="#476dfc" Padding="10" CornerRadius="25" x:Name="AuxiliaryEquipmentQuantity" Text="+" Clicked="AuxiliaryEquipmentQuantity_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-                <Button Grid.Column="1" Grid.Row="54" BackgroundColor="#2140b0" Padding="10" CornerRadius="25" x:Name="AuxiliaryEquipmentLess" Text="-" Clicked="AuxiliaryEquipmentLess_Clicked" TextColor="WhiteSmoke" FontSize="Small"/>
-
-
-
-
-            </Grid>
-            <Frame  BackgroundColor="#C0C0C0" Padding="40" CornerRadius="20">
-                <Entry Placeholder="" x:Name="Comments" Text="{i18n:Translate Comments}" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Small"/>
+            <Frame  BackgroundColor="{DynamicResource PrimaryColor}" Padding="40" CornerRadius="20">
+                <Entry Placeholder="" x:Name="Comments" Text="{i18n:Translate Comments}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
             </Frame>
 
 
-            <Button  BackgroundColor="#fac519" Padding="10" x:Name="SaveButton" Text="{i18n:Translate SaveButton}" Clicked="SaveButton_Clicked" TextColor="Black" FontSize="Small"/>
+            <Button  BackgroundColor="{DynamicResource SecondaryColor}" Padding="10" x:Name="SaveButton" Text="{i18n:Translate SaveButton}" Clicked="SaveButton_Clicked" TextColor="{DynamicResource SecondaryTextColor}" FontSize="Small"/>
 
         </StackLayout>
 

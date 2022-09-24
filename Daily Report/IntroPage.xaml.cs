@@ -53,6 +53,8 @@ namespace Daily_Report
             
             Navigation.PushAsync(new MainPage());
         }
+
+        
     }
     
 }

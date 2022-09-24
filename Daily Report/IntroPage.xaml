@@ -2,20 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:Daily_Report.Helpers" 
-             x:Class="Daily_Report.IntroPage">
+             x:Class="Daily_Report.IntroPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}"
+            >
+
     <ContentPage.Content>
         <StackLayout>
-            <Frame BackgroundColor="#476dfc" Padding="24" CornerRadius="0">
-                <Label x:Name="Greeting" Text="{i18n:Translate Greeting}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Frame BackgroundColor="{DynamicResource PrimaryColor}" Padding="24" CornerRadius="0">
+                <Label x:Name="Greeting" Text="{i18n:Translate Greeting}" HorizontalTextAlignment="Center" TextColor="{DynamicResource SecondaryTextColor}" FontSize="36"/>
             </Frame>
-            <Label BackgroundColor="#325dfc" x:Name="Note" Text="{i18n:Translate Note}" FontSize="Title" HorizontalTextAlignment="Center" Padding="30,10,30,10"/>
-            <Label BackgroundColor="#2b50d9" x:Name="Note2" Text="{i18n:Translate Note2}" FontSize="Subtitle" HorizontalTextAlignment="Center" Padding="30,15,30,15"/>
+            <Label BackgroundColor="{DynamicResource PrimaryColor}" x:Name="Note" TextColor="{DynamicResource SecondaryTextColor}" Text="{i18n:Translate Note}" FontSize="Title" HorizontalTextAlignment="Center" Padding="30,10,30,10"/>
+            <Label BackgroundColor="{DynamicResource PrimaryColor}" x:Name="Note2" TextColor="{DynamicResource SecondaryTextColor}" Text="{i18n:Translate Note2}" FontSize="Subtitle" HorizontalTextAlignment="Center" Padding="30,15,30,15"/>
 
-            <Button BackgroundColor="#2140b0" x:Name="Npage" Text="{i18n:Translate Npage}" Clicked="Next_Clicked" />
+            <Button BackgroundColor="{DynamicResource SecondaryColor}" x:Name="Npage" TextColor="{DynamicResource SecondaryTextColor}" Text="{i18n:Translate Npage}" Clicked="Next_Clicked" />
 
-            <Button BackgroundColor="#183087" TextColor="White" Text="ENG" Clicked="ENG_Clicked" />
+            <Button BackgroundColor="{DynamicResource SecondaryColor}" TextColor="{DynamicResource SecondaryTextColor}" Text="ENG" Clicked="ENG_Clicked" />
 
-            <Button BackgroundColor="#142669" TextColor="White" Text="PL" Clicked="PL_Clicked" />
+            <Button BackgroundColor="{DynamicResource SecondaryColor}" TextColor="{DynamicResource SecondaryTextColor}" Text="PL" Clicked="PL_Clicked" />
 
         </StackLayout>
     </ContentPage.Content>
